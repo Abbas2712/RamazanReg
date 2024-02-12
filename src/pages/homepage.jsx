@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import axios from "axios";
 import { useState } from "react";
 import familyMembersApi from "../routes/familyMembersApi";
 import FamilyMemberCard from '../components/familyMemberCard'
@@ -11,8 +10,6 @@ function HomePage() {
     // call get all familyMembersApi here
     familyMembersApi(setFamilyMemberLists);
   }, []);
-
-  console.log(familyMemberLists)
 
   return (
     <div>
@@ -27,5 +24,4 @@ function HomePage() {
     </div>
   );
 }
-
 export default HomePage;
