@@ -1,15 +1,17 @@
-import axios from "axios";
-import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import styles from '../styles/global.module.css'
+import loginStyles from '../styles/login.module.css'
 import loginPost from "../routes/loginApi";
+import React from "react";
 
 export default function LoginPage() {
   const [loginDetails, setLoginDetails] = React.useState({
     ITSNumber: "",
     password: "",
   });
-  const navigate = useNavigate()
 
+  // init navigation hooks for routing and passing to login api
+  const navigate = useNavigate()
 
   const handleSubmit = e => {
     // prevent reload
@@ -35,10 +37,13 @@ export default function LoginPage() {
     }
   };
   return (
-    <div>
-      <h1 className="text-center mt-5">Login</h1>
+    <div className={loginStyles.loginSection}>
+      <div style={{display:"grid",justifyItems:"center"}}>
+        <h1 className={styles.displayText}>Login</h1>
+        <p style={{fontSize:'0.8em', lineHeight:'0.3em'}}>Enter Your Details</p>
+      </div>
       <form action="Submit" method="post">
-        <label htmlFor="">ITS Number</label>
+        <label htmlFor="" >ITS Number</label>
         <br />
         <input
           type="number"

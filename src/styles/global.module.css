@@ -1,0 +1,99 @@
+:global(:root){
+
+    
+    --font-weight-light-300: 300;
+    --font-weight-regular-400: 400;
+    --font-weight-medium-500:500;
+    --font-weight-semi-bold-600: 600;
+    --font-weight-bold-700: 700;
+
+    /* global colors */
+    --primary-color: #fff;
+    --secondary-color:#000000;
+    --ternary-color:#0f8069;
+
+    /* global Values */
+    line-height: 1.6;
+
+    
+}
+
+*{
+    font-family: 'General Sans', sans-serif;
+    margin: 0px;
+}
+
+body{
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+}
+
+.baseText{
+    font-size: 1em;
+    font-weight: var(--font-weight-regular-400);
+    color: var(--secondary-color);
+}
+
+.displayText {
+  font-size: 1.8rem; /* Display font size */
+  line-height: 1; /* Display line height */
+   /*letter-spacing: 0.02em; /*Display letter spacing */
+  font-weight: var(--font-weight-bold-700);
+  color: var(--secondary-color);
+}
+
+.header{
+    display: flex;
+    padding: 1em 1.2em 1em 1.2em;
+    justify-content: center;
+    background-color: var(--ternary-color);
+    color: var(--primary-color);
+}
+
+/*  Input  */
+
+input{
+    height: 2.125em;
+    width: 85vw;
+    border: 1.2px solid #9a9a9a50;
+    border-radius: 4px;
+    margin-bottom: 1em;
+    padding-left: 0.8em;
+}
+
+input::placeholder{
+    color: #00000030
+}
+
+input:focus{
+    border: 1.6px solid;
+    border-color: #0f806950 ;
+}
+input:focus-visible{
+    outline: none;
+}
+
+/* Button  */
+button{
+    margin-top: 1em;
+    height: 2.375em;
+    width: 85.5vw;
+    justify-items: center;
+    border: none;
+    background-color: var(--ternary-color);
+    color: var(--primary-color);
+    border-radius: 4px;
+    font-weight: var(--font-weight-medium-500);
+    padding-inline: 0px !important;
+    padding-block: 0px !important;
+}
+
+/* Label */
+label{
+    font-size: 0.9em;
+    font-weight: 300 !important;
+    margin-bottom: 0.3em;
+}

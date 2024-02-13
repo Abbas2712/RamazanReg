@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import allVenueApi from "../routes/allVenueApi";
 import updateUserApi from "../routes/updateUserApi";
 import VenueDropdown from "../components/venueDropdown";
+import venueStyles from '../styles/editVenue.module.css'
 
 function EditVenue() {
   // get data and destructre it from previous state
@@ -21,11 +22,16 @@ function EditVenue() {
     e.preventDefault();
 
     // call the user Details Api Here
-    updateUserApi(ITSNumber= userData.ITSNumber, updateUser)
+    updateUserApi(userData.ITSNumber, updateUser)
   };
 
   return (
-    <div>
+   
+    <div className={venueStyles.venueSection}>
+      <div style={{ display: "grid",justifyItems: "center"}}>
+        <h2>Edit Venue Information</h2>
+        <p>Fill all the Details </p>
+      </div>
       <form action="submit" method="post">
         <label htmlFor="name">Name:</label>
         <br />
@@ -82,7 +88,7 @@ function EditVenue() {
         <VenueDropdown setUpdateUser={setUpdateUser} venueDetailsList={venueDetailsList}/>
         <br />
         <label htmlFor="chair">Chair:</label>
-        <label>
+        <label className={venueStyles.customRadioBtn}>
           <input
             name="chair"
             value="true"
@@ -174,6 +180,8 @@ function EditVenue() {
         </button>
       </form>
     </div>
+    
+    
   );
 }
 

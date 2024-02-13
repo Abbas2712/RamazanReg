@@ -1,0 +1,44 @@
+@import url(./global.module.css);
+
+/* Page */
+.homePageContainer{
+    margin: 2em 0em 2em 0em;
+}
+
+/* Title */
+.pageTitle{
+    padding-bottom: 0.8em;
+    padding-left: 0.5em;
+    font-weight: var(--font-weight-bold-700);
+    font-size: 1.3em;
+}
+
+/* table */
+.familyTable {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.tableWrapper {
+  overflow-y: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th,td {
+  padding: 0.5em 1em;
+  text-align: left;
+  border-bottom: 1px solid #ddd; /* Add border bottom for table cells */
+}
+
+th {
+    background-color: var(--ternary-color); /* Background color for table header */
+    color: var(--primary-color);
+  }
+
+/* edit Button */
+.editButton {
+  width: 20vw;
+}
